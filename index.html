@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Метод Гаусса</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Метод Гаусса
+            </h1>
+        </header>
+        <main>
+            <section class="description">
+                <h2>О программе</h2>
+                <p>
+                    Программа решает систему линейных уравнений методом Гаусса, изначально в систему введены данные варианта #6, но при желании их можно поменять
+                </p>
+            </section>
+            <section class="view">
+                <h2>Программа:</h2>
+                <div>
+                    <p>Введите количество строк/столбцов или строк (максимальное значение - 15):</p>
+                    <input type="number" id="rowsCountInput" value="4"><span></span>
+                    <span id="rowsCountSpan" class="error" style="display:none">Ошибка в вводе значения</span>
+                </div>
+                <div>
+                    <table id="coefficientsTable"></table>
+                    <table id="constantsTable"></table>
+                </div>
+                <div>
+                    <button onclick="getResult()">Получить результат</button>
+                    <span id="tablesSpan" class="error" style="display:none">Ошибка в вводе значений</span>
+                </div>
+                <div id="solution">
+                    
+                </div>
+            </section>
+        </main>
+    </body>
+    <script src="js/GaussianMethod.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/main.js"></script>
+</html>
