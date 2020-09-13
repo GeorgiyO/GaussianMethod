@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Метод Гаусса</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/big-buttons.css">
     </head>
     <body>
         <header>
@@ -11,32 +13,35 @@
         </header>
         <main>
             <section class="description">
-                <h2>О программе</h2>
+                <h1>О программе</h1>
                 <p>
                     Программа решает систему линейных уравнений методом Гаусса, изначально в систему введены данные варианта #6, но при желании их можно поменять
                 </p>
             </section>
-            <section class="view">
-                <h2>Программа:</h2>
+            <section>
+                <h1>Программа:</h1>
                 <div>
                     <p>Введите количество строк/столбцов или строк (максимальное значение - 15):</p>
                     <input type="number" id="rowsCountInput" value="4"><span></span>
                     <span id="rowsCountSpan" class="error" style="display:none">Ошибка в вводе значения</span>
                 </div>
-                <div>
-                    <table id="coefficientsTable"></table>
-                    <table id="constantsTable"></table>
+            </section>
+            <section>
+                <table id="coefficientsTable"></table>
+                <table id="constantsTable"></table>
+            </section>
+            <section>
+                <div class="big-btn center-content">
+                    <a class="btn" onclick="getResult()">Получить результат</a>
                 </div>
-                <div>
-                    <button onclick="getResult()">Получить результат</button>
-                    <span id="tablesSpan" class="error" style="display:none">Ошибка в вводе значений</span>
-                </div>
+                <div id="tablesSpan" class="error" style="display:none">Ошибка в вводе значений</div>
                 <div id="solution">
                     
                 </div>
             </section>
         </main>
     </body>
+    <script src="js/ripple-button.js"></script>
     <script src="js/GaussianMethod.js"></script>
     <script src="js/table.js"></script>
     <script src="js/main.js"></script>

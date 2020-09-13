@@ -2,6 +2,8 @@
  * this file works with tables, change tables size and return arrays of values
  */
 
+"use strict";
+
  // html elements in view layer:
 
 let rowsCountInput = document.getElementById("rowsCountInput");
@@ -49,9 +51,9 @@ function getTables() {
     try {
         coefArr = getCoefArr();
         consArr = getConsArr();
-    } catch (WrongTableValueError) {
+    } catch (e) {
         showError(tablesSpan);
-        throw new WrongTableValueError();
+        throw e;
     }
     hideError(tablesSpan);
     let tables = {
@@ -95,7 +97,7 @@ function addCellsToTr(tr, count) {
         let cell = document.createElement("input");
         cell.setAttribute("type", "number");
         cell.setAttribute("value", "0");
-        tr.appendChild(cell);
+        tr.appendChild(document.createElement("td")).appendChild(cell);
     }
 }
 
@@ -110,7 +112,7 @@ function getCoefArr() {
     [...coefTable.children].forEach((tr) => {
         let row = [];
         [...tr.children].forEach((cell) => {
-            let v = cell.value;
+            let v = cell.firstChild.value;
             v = Number.parseFloat(v);
             if (Number.isNaN(v)) throw new WrongTableValueError();
             row.push(v);
@@ -123,7 +125,7 @@ function getCoefArr() {
 function getConsArr() {
     let arr = [];
     [...consTable.children].forEach((tr) => {
-        let v = tr.firstChild.value;
+        let v = tr.firstChild.firstChild.value;
         v = Number.parseFloat(v);
         if (Number.isNaN(v)) throw new WrongTableValueError();
         arr.push(v);

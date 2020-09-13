@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.big-btn {
+  display: flex;
+  margin: 30px 0 20px 0;
+}
+
+.big-btn a {
+    display: block;
+    position: relative;
+
+    margin: 0 20px;
+    height: 60px;
+    width: 200px;
+
+    line-height: 60px;
+    
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-align: center;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently */
+
+    border: 1px solid transparent;
+    border-color: #59b1f9;
+    border-radius: 30px;
+
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier; 
+
+    overflow: hidden;
+}
+
+.big-btn a:hover {
+    background-color: #59b1f9;
+    color: #f8f8f8;
+}
+
+.big-btn a span {
+  position: absolute;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: ripples 0.6s linear infinite;
+}
+
+@keyframes ripples {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}

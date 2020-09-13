@@ -9,7 +9,7 @@ function getResult() {
         let result = gaussianMethod.getResult(getTables());
         printResult(result);
     } catch (e) {
-        console.log("Тут в теории должна быть обработка ошибки");
+        console.log("Тут в теории должно быть какое - то действие при ошибке?");
         console.log(e);
     }
 }

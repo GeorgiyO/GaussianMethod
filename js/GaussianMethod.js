@@ -20,9 +20,10 @@ class GaussianMethod {
 
         this.setTables(tables);
 
-        if (this.straight()) this.back();
-
-        this.setResultValue();
+        if (this.straight()) {
+            this.back();
+            this.setResultValue();
+        }
         return this.result;
     }
 
@@ -241,6 +242,7 @@ class GaussianMethod {
             solutions.push(solution);
         }
         this.result.value = solutions;
+        console.log(solutions);
     }
 
     log() {

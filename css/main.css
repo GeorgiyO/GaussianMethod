@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap');
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1.25rem;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body::after {
+    background: url("https://wallpaperswise.com/wp-content/uploads/2019/07/anime-girl-wallpaper-2.jpg") no-repeat center center fixed;
+    opacity: 0.25;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1; 
+    content: "";
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 105%; /* Современные браузеры */
+}
+
+header {
+    width: 80%;
+    margin-top: 70px;
+    padding: 0 10%;
+
+    text-align: center;
+    font-family: "Product Sans", Helvetica, Arial, serif;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0.2em;
+    font-size: 4em;
+}
+
+section {
+    width: 80%;
+    padding: 0 10%;
+    margin-bottom: 20px;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    display: inline-block;
+    border-collapse: collapse;
+}
+
+table td {
+    border: 1px solid #555;
+    width: 50px;
+    height: 30px;
+    padding: 0;
+}
+
+input {
+    background: none;
+    font-family: "Product Sans", Helvetica, Arial, serif;
+    outline: none;
+}
+
+table input {
+    width: 50px;
+    height: 30px;
+    border: none;
+}
+
+#rowsCountInput {
+    border: 1px solid #555;
+}
+
+table input:focus {
+    background-color: #aae8ff
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
